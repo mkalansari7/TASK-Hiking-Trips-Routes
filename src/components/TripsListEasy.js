@@ -4,14 +4,14 @@ import SearchBar from "./SearchBar";
 import TripItem from "./TripItem";
 import { Navigate } from "react-router-dom";
 
-function TripsList() {
+function TripsListEasy() {
   const [query, setQuery] = useState("");
   const [difficulty, setDifficulty] = useState("");
   const trips = tripsData
     .filter(
       (trip) =>
         trip.name.toLowerCase().includes(query.toLowerCase()) &&
-        trip.difficulty.includes(difficulty)
+        trip.difficulty.includes("easy")
     )
     .map((trip) => <TripItem trip={trip} />);
 
@@ -62,4 +62,4 @@ function TripsList() {
   );
 }
 
-export default TripsList;
+export default TripsListEasy;

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import tripsData from "../tripsData";
 import { useParams, Navigate } from "react-router-dom";
 
